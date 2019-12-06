@@ -11,9 +11,14 @@
       </ul>
 
       <section class="top-bar-section">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%=link_to "Register", "#" %></li>
-          <li><%=link_to "Login", "#" %></li>
+        <ul class="right mt-30">
+          <% if signed_in? %>
+            <li class="inline mr-20"><%= link_to current_user.email, edit_user_registration_path %></li>
+            <li class="inline mr-20"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li class="inline mr-20"><%= link_to "Register", new_user_registration_path %></li>
+            <li class="inline mr-20"><%= link_to "Login", new_user_session_path %></li>
+          <%end%>
         </ul>
       </section>
 
