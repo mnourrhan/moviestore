@@ -104,6 +104,7 @@ body {
 .navbar{
   padding-left: 30px;
   padding-right: 30px;
+  background-color: #09090929;
 }
 .right{
   float: right;
@@ -170,4 +171,14 @@ body {
 
 .wd-180{
   width: 180px;
+}
+
+ul.pagination{
+  text-align: center!important;
+  justify-content: center;
+  display: flex;
+}
+
+div.pagination{
+  width: 100%;
 }

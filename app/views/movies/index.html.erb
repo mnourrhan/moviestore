@@ -1,25 +1,5 @@
 <!-- <h4 class="column">Featured Movies</h4> -->
-<div class="column">
-  <ul class="movies-grid no-bullet row">
-    <% @movies.each do |movie| %>
-    <div class="card col-sm-4">
-      <li class="large-3 medium-4 small-12 column">
-        <div class="movie-card padly">
-          <%= link_to movie, class: "poster" do %>
-            <%= image_tag movie.poster_url %>
-          <% end %>
-          <div class="card-body ell glassy-bg padmy padlx">
-            <div class="card-text">
-              <h6><%= movie.title %> <span>(<%= movie.release_year %>)</span></h6>
-            </div>
-            <p class="left price label movie-label radius">$ <%= movie.price %></p>
-            <%= link_to movie.imdb, class: "right" do %>
-              <%= image_tag asset_path("imdb_logo.png") %>
-            <% end %>
-          </div>
-        </div>
-      </li>
-    </div>
-    <% end %>
-  </ul>
+<div id="movies"class="movies-grid no-bullet row">
+  <%= render @movies %>
 </div>
+<%= will_paginate @movies %>
