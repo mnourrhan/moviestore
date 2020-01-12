@@ -1,24 +1,12 @@
-# README
+Ruby on Rails Movie Store App
+This is the sample application for buying movies and adding it to your cart.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting started
+To get started with the app, clone the repo and then install the needed gems:
 
-Things you may want to cover:
+$ bundle install --without production
+Next, migrate the database:
 
-* Ruby version
+$ rails db:migrate
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ rails server
